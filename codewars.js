@@ -31,3 +31,14 @@ function elevator(left, right, call){
   return Math.abs(call - right) > Math.abs(call - left) ? "left" : "right";
 }
 console.log(elevator(0, 1, 3));
+
+function points(games) {
+  return games.reduce((acc, item) => {
+    const scoreArr = item.split(":");
+    return (acc +=
+      scoreArr[0] > scoreArr[1] ? 3 : scoreArr[0] === scoreArr[1] ? 1 : 0);
+  }, 0);
+}
+console.log(
+  points(["1:0", "2:0", "3:0", "4:0", "2:1", "3:1", "4:1", "3:2", "4:2", "4:3"])
+);
