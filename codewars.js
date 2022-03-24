@@ -25,3 +25,9 @@ function warnTheSheep(queue) {
 }
 
 console.log(transformString(["sheep", "sheep", "sheep", "wolf", "sheep"]));
+
+
+function elevator(left, right, call){
+  return Math.abs(call - right) > Math.abs(call - left) ? "left" : "right";
+}
+console.log(elevator(0, 1, 3));
