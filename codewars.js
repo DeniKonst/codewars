@@ -9,3 +9,19 @@ function transformString(str) {
   });
 }
 console.log(transformString("S-Bd-C-vasja-petya"));
+
+
+
+function warnTheSheep(queue) {
+  return queue.reduceRight((acc, item, i, arr) => {
+    if (arr.length - 1 === i && item === "wolf") {
+      acc = "Pls go away and stop eating my sheep"
+    } else if (item === "wolf") {
+      acc = `Oi! Sheep number ${arr.length - i - 1}! You are about to be eaten by a wolf!`
+    }
+    
+    return acc;
+  }, '')
+}
+
+console.log(transformString(["sheep", "sheep", "sheep", "wolf", "sheep"]));
