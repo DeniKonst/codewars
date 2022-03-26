@@ -42,3 +42,14 @@ function points(games) {
 console.log(
   points(["1:0", "2:0", "3:0", "4:0", "2:1", "3:1", "4:1", "3:2", "4:2", "4:3"])
 );
+
+function pillars(num_pill, dist, width) {
+  const distSm = dist*10;
+  if (num_pill>=2 && num_pill%2 == 0) {
+  return distance = (distSm*(num_pill-1)) + (width*(num_pill-2))}
+  else if (num_pill=1) {
+    return 0;
+  }
+}
+console.log(pillars(2, 20, 25));
+
